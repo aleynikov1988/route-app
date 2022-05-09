@@ -47,3 +47,9 @@ export function getInvoice(id: number): Invoice|undefined {
     (item: Invoice) => item.number === id
   );
 }
+
+export function deleteInvoice(id: number): void {
+  invoices = invoices.filter(
+    (invoice) => invoice.number !== id
+  );
+}
